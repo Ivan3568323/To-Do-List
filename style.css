@@ -1,0 +1,118 @@
+*{
+    box-sizing: border-box;
+}
+
+.todo_container {
+    max-width: 768px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 50px;
+    border-radius: 8px;
+    background-color: rgb(223, 223, 223);
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    font-family: 'Hind', sans-serif;
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background-color: #eee;
+    font-size: 18px;
+    transition: .2s;
+    -webkit-user-select: none;
+    user-select: none;
+    list-style-type: none;
+}
+
+ul li:nth-child(odd) {
+    background: #f9f9f9;
+}
+
+ul li:hover {
+    background: #ddd;
+}
+
+ul li.checked {
+    background-color: #202020;
+    color: #fff;
+    text-decoration: line-through;
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+    transition: .3s;
+}
+
+.close:hover {
+    background-color: #f44336;
+    color: white;
+    
+    border-radius: 100%;
+}
+
+.header {
+    margin-bottom: 3rem;
+    padding: 2.5rem;
+    overflow: hidden;
+    background-color: #202020;
+    box-shadow: 0 15px 25px rgb(0 0 0 / 35%);
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Londrina Solid', cursive;
+    color: white;
+}
+
+.header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+input {
+    border: none;
+    width: 75%;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.addBtn {
+    padding: 10px;
+    width: 25%;
+    background-color: #3137C9;
+    box-shadow: 0 7px 17px -10px rgb(49 55 201 / 30%);
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.addBtn:hover {
+    background-color: #4c51e2;
+    font-size: 18px;
+    border-radius: 3px;
+}
